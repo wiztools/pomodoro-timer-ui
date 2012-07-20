@@ -40,6 +40,7 @@ public class PomodoroFrame extends JFrame {
         jd_timeoutDialog = new TimeoutDialog(me, "Stop Working :-)");
 
         jb_start.setMnemonic('s');
+        getRootPane().setDefaultButton(jb_start);
         jb_stop.setEnabled(false);
 
         Font timerFont = new Font(Font.SANS_SERIF, Font.BOLD, 26);
