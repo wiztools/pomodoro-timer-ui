@@ -17,6 +17,7 @@ public class TimerAction extends AbstractAction {
         lifecycle.start();
     }
 
+    @Override
     public void actionPerformed(ActionEvent e){
         if(currentSecond < 0){
             return;

@@ -30,7 +30,7 @@ public class PomodoroFrame extends JFrame {
     private TimerLifecycle lifecycle;
     private Timer timer;
 
-    private JFrame me;
+    private final JFrame me = this;
     
     // Macify:
     private final Application application = new DefaultApplication();
@@ -39,6 +39,7 @@ public class PomodoroFrame extends JFrame {
         // Configure Esc action
         KeyStroke escapeKeyStroke = KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0, false);
         Action escapeAction = new AbstractAction() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 stopTimer();
             }
@@ -57,6 +58,7 @@ public class PomodoroFrame extends JFrame {
         jl_time_counter.setFont(timerFont);
 
         jb_start.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 String minStr = jtf_time_minutes.getText();
                 int minutes = -1;
@@ -89,6 +91,7 @@ public class PomodoroFrame extends JFrame {
         });
 
         jb_stop.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 stopTimer();
             }
@@ -146,8 +149,6 @@ public class PomodoroFrame extends JFrame {
 
     public PomodoroFrame(final String title){
         super(title);
-
-        me = this;
 
         init();
 
