@@ -38,7 +38,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>org.wiztools.checksumcompute.ChecksumComputeMain</mainClass>
+                            <mainClass>org.wiztools.util.pomodorotimerui.Main</mainClass>
                         </manifest>
                         <manifestEntries>
                             <mode>development</mode>
