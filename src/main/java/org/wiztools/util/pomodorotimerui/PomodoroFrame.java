@@ -8,6 +8,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import javax.swing.*;
+import org.simplericity.macify.eawt.Application;
+import org.simplericity.macify.eawt.DefaultApplication;
 
 /**
  *
@@ -29,6 +31,9 @@ public class PomodoroFrame extends JFrame {
     private Timer timer;
 
     private JFrame me;
+    
+    // Macify:
+    private final Application application = new DefaultApplication();
 
     private void init(){
         // Configure Esc action
@@ -88,6 +93,9 @@ public class PomodoroFrame extends JFrame {
                 stopTimer();
             }
         });
+        
+        // Macify:
+        application.addAboutMenuItem();
     }
     
     private void stopTimer() {
