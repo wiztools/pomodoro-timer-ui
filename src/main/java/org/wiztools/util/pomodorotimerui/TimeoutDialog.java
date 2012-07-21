@@ -47,6 +47,7 @@ public class TimeoutDialog extends JDialog {
         // Configure Esc action
         KeyStroke escapeKeyStroke = KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0, false);
         Action escapeAction = new AbstractAction() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 closeDialog();
             }
@@ -62,6 +63,7 @@ public class TimeoutDialog extends JDialog {
         JPanel jp_south = new JPanel();
         jp_south.setLayout(new FlowLayout(FlowLayout.CENTER));
         jb.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 closeDialog();
             }
