@@ -40,6 +40,8 @@ public class TimeoutDialog extends JDialog {
         setSize(DIALOG_WIDTH, DIALOG_HEIGHT);
         setResizable(false);
         setModal(true);
+        
+        getRootPane().setDefaultButton(jb);
 
         addWindowListener(new WindowAdapter() {
 
