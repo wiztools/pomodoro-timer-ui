@@ -71,7 +71,9 @@ public class TimeoutDialog extends JDialog {
     }
 
     private void closeDialog(){
-        timer.stop();
+        if(timer != null && timer.isRunning()) {
+            timer.stop();
+        }
         setVisible(false);
     }
 
