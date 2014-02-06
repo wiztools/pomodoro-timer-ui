@@ -4,7 +4,7 @@
     <groupId>org.wiztools.util</groupId>
     <artifactId>pomodoro-timer-ui</artifactId>
     <packaging>jar</packaging>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.2</version>
     <name>pomodoro-timer-ui</name>
     <url>http://wiztools.googlecode.com</url>
     
