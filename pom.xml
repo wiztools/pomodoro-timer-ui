@@ -13,9 +13,9 @@
     </properties>
     
     <scm>
-        <connection>scm:svn:http://wiztools.googlecode.com/svn/pomodoro-timer-ui/trunk/</connection>
-        <developerConnection>scm:svn:https://wiztools.googlecode.com/svn/pomodoro-timer-ui/trunk/</developerConnection>
-        <url>http://code.google.com/p/wiztools/source/browse/</url>
+        <connection>scm:git:https://github.com/wiztools/pomodoro-timer-ui.git</connection>
+        <developerConnection>scm:git:https://github.com/wiztools/pomodoro-timer-ui.git</developerConnection>
+        <url>https://github.com/wiztools/pomodoro-timer-ui</url>
     </scm>
     
     <build>
@@ -23,7 +23,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.5.1</version>
+                <version>3.1</version>
                 <configuration>
                     <source>1.6</source>
                     <target>1.6</target>
@@ -57,9 +57,9 @@
                 </executions>
             </plugin>
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
+                <groupId>com.agiliumlabs.osxappbundle</groupId>
                 <artifactId>osxappbundle-maven-plugin</artifactId>
-                <version>1.0-alpha-2</version>
+                <version>1.0.0</version>
                 <configuration>
                     <mainClass>org.wiztools.util.pomodorotimerui.Main</mainClass>
                     <bundleName>WizTools.org Pomodoro Timer</bundleName>
@@ -74,14 +74,6 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-release-plugin</artifactId>
-                <version>2.3.2</version>
-                <configuration>
-                    <tagBase>https://wiztools.googlecode.com/svn/pomodoro-timer-ui/tags</tagBase>
-                </configuration>
             </plugin>
         </plugins>
     </build>
